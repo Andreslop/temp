@@ -1,0 +1,18 @@
+<h2><%= @persona.nombre %> <%= @persona.apellido %></h2>
+<div>
+    <span>Edad: </span> <%= @persona.edad %>
+</div>
+<div>
+    <span>Email: </span> <%= @persona.email %>
+</div>
+<div>
+    <%= link_to "Volver", root_path %>
+</div>
+
+<div>
+    <%= link_to "Editar", edit_persona_path(@persona) %>
+</div>
+
+<div>
+    <%= link_to "Eliminar", @persona , method: :delete, data: { confirm: "Estas Seguro?"} %>
+</div>
